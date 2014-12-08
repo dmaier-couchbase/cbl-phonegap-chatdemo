@@ -1,0 +1,17 @@
+
+table {
+    table-layout: fixed;
+}
+
+.chatform {
+    padding-left: 20px;
+}
+
+.cellheader {
+    font-style: italic;
+    font-size: x-small;
+}
+
+.cellvalue {
+    word-wrap: break-word;
+}
