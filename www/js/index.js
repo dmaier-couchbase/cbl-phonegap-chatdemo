@@ -2,7 +2,7 @@
  * Constants
  */
 var LOG_TO_UI = true;
-var DEBUG_IN_BROWSER = true;
+var DEBUG_IN_BROWSER = false;
 var DB_NAME = "chatdemo";
 var DB_URL = "";
 
