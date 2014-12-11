@@ -3,7 +3,7 @@
  */
 var LOG_TO_UI = true;
 var DEBUG_IN_BROWSER = false;
-var DB_NAME = "chatdemo";
+var DB_NAME = "test_chatdemo_1";
 var DB_URL = "";
 
 /**
