@@ -39,18 +39,13 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
-		9DD452389E7D4F309D651FC6 /* CBLite.m in Sources */ = {isa = PBXBuildFile; fileRef = E04E44F92EB042CE8F7886B8 /* CBLite.m */; };
-		376D3ECC82BE4B2E8FD39C51 /* libCBLJSViewCompiler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F298CADA274CEE831C5CE9 /* libCBLJSViewCompiler.a */; };
-		2B81C804D773433EB1FA623E /* CouchbaseLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9917D644FDCE4867919C968C /* CouchbaseLite.a */; };
-		66B56779735443B49AC0C4B2 /* JavaScriptCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B9E1DDCAA445509771089B /* JavaScriptCore.a */; };
-		9F941022E8D24407BD2967BA /* CouchbaseLiteListener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D65CCD7EE9744AAA743A1C4 /* CouchbaseLiteListener.a */; };
-		76DDAC362D884183B620CA2E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3A845AE08E444FBA7D4596 /* libsqlite3.dylib */; };
-		337A5B2A2BF84526BD87554E /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E52C9583F8740F2B0C717D3 /* libstdc++.dylib */; };
-		601416C0E1984810A05709E6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8862C16FBF42CC95215BC4 /* libicucore.dylib */; };
-		31B1F92A6DAB46A294732A8D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B497C1453E1642E88E326C2A /* libz.dylib */; };
-		B69A9359EDB749A0B19DECA7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129BC9984E1F405FBAC5AF57 /* Security.framework */; };
-		2942CC29128444EEBEDE3753 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD11D19B92674BB7AA447917 /* CFNetwork.framework */; };
-		1D430007AF0D458C884280ED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF0D7BB8E364D2C9D626193 /* SystemConfiguration.framework */; };
+		AD192DCA4B104D1A9312ADBA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AD8239CE0349D9BB8017E1 /* libsqlite3.dylib */; };
+		D6FD1D3F7B8646BAA6F0F9ED /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81361BEFD9B74FECAA1B7D59 /* libstdc++.dylib */; };
+		245C8E9EB5574827A8192705 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A50CA269E44AD9A6485922 /* libicucore.dylib */; };
+		9617D89DEFEB43B7AD79418A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE22AB1A545A41BDB54DE770 /* libz.dylib */; };
+		85FFEC020D1441E789A10032 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FB28D83D28444CA8CC2FA4 /* Security.framework */; };
+		9CEDFE394E854322B07E16C8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A9E2C9E20D413BAE3E04B1 /* CFNetwork.framework */; };
+		9297FC6C4CC0486ABB77870E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ECA32865BE4348871FCBDD /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,49 +111,13 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Hello World/config.xml"; sourceTree = "<group>"; };
-		E04E44F92EB042CE8F7886B8 /* CBLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CBLite.m"; path = "com.couchbase.lite.phonegap/CBLite.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		C8F298CADA274CEE831C5CE9 /* libCBLJSViewCompiler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCBLJSViewCompiler.a"; path = "Hello World/Plugins/com.couchbase.lite.phonegap/libCBLJSViewCompiler.a"; sourceTree = "<group>"; fileEncoding = 4; };
-		9917D644FDCE4867919C968C /* CouchbaseLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "CouchbaseLite.a"; path = "Hello World/Plugins/com.couchbase.lite.phonegap/CouchbaseLite.a"; sourceTree = "<group>"; fileEncoding = 4; };
-		B1B9E1DDCAA445509771089B /* JavaScriptCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "JavaScriptCore.a"; path = "Hello World/Plugins/com.couchbase.lite.phonegap/JavaScriptCore.a"; sourceTree = "<group>"; fileEncoding = 4; };
-		3D65CCD7EE9744AAA743A1C4 /* CouchbaseLiteListener.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "CouchbaseLiteListener.a"; path = "Hello World/Plugins/com.couchbase.lite.phonegap/CouchbaseLiteListener.a"; sourceTree = "<group>"; fileEncoding = 4; };
-		C50B7989086B4CC0BAB01920 /* CBLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLite.h"; path = "com.couchbase.lite.phonegap/CBLite.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		96432D85227545A890BDE42D /* CBLRegisterJSViewCompiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLRegisterJSViewCompiler.h"; path = "com.couchbase.lite.phonegap/CBLRegisterJSViewCompiler.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		DBF62F7B1E404EB4980DD2C0 /* CBLAttachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLAttachment.h"; path = "com.couchbase.lite.phonegap/CBLAttachment.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		7287E0F4EA464832A86819A0 /* CBLAuthenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLAuthenticator.h"; path = "com.couchbase.lite.phonegap/CBLAuthenticator.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		74A537B4E3474BAEBA4909AC /* CBLDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLDatabase.h"; path = "com.couchbase.lite.phonegap/CBLDatabase.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		73A614E9EC9245B3BD3ECEF1 /* CBLDatabaseChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLDatabaseChange.h"; path = "com.couchbase.lite.phonegap/CBLDatabaseChange.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		2CEE4DCC50A34892A6D9FB2D /* CBLDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLDocument.h"; path = "com.couchbase.lite.phonegap/CBLDocument.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		145A6AC32B134BA199E56E16 /* CBLGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLGeometry.h"; path = "com.couchbase.lite.phonegap/CBLGeometry.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		1D854924808C4D379862C4BB /* CBLJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLJSON.h"; path = "com.couchbase.lite.phonegap/CBLJSON.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		D4A239F1C385453682415E1A /* CBLManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLManager.h"; path = "com.couchbase.lite.phonegap/CBLManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		B55004E1D77F435197836942 /* CBLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLModel.h"; path = "com.couchbase.lite.phonegap/CBLModel.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		B82202665A0740F081D2BD15 /* CBLModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLModelFactory.h"; path = "com.couchbase.lite.phonegap/CBLModelFactory.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		E2B6903101E94214819BF58B /* CBLQuery+FullTextSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLQuery+FullTextSearch.h"; path = "com.couchbase.lite.phonegap/CBLQuery+FullTextSearch.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		E1F3F0E35BCA477086E2B413 /* CBLQuery+Geo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLQuery+Geo.h"; path = "com.couchbase.lite.phonegap/CBLQuery+Geo.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		8CCD03D1D6EE4814B888C3C3 /* CBLQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLQuery.h"; path = "com.couchbase.lite.phonegap/CBLQuery.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		591A803620C14A318CEC61C6 /* CBLReplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLReplication.h"; path = "com.couchbase.lite.phonegap/CBLReplication.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		C3746113CDDD42F7A4073C14 /* CBLRevision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLRevision.h"; path = "com.couchbase.lite.phonegap/CBLRevision.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		BF329425C0C542BD9912431B /* CBLUITableSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLUITableSource.h"; path = "com.couchbase.lite.phonegap/CBLUITableSource.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		E1BE046642F24522BBDA68C0 /* CBLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLView.h"; path = "com.couchbase.lite.phonegap/CBLView.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		DC8CDA09CD4A49F0A1B5D928 /* CouchbaseLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CouchbaseLite.h"; path = "com.couchbase.lite.phonegap/CouchbaseLite.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		734BAB2F4629468EB1BC9513 /* MYDynamicObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MYDynamicObject.h"; path = "com.couchbase.lite.phonegap/MYDynamicObject.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		433D6E1CAFBE47E7AA0207AB /* JSBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSBase.h"; path = "com.couchbase.lite.phonegap/JSBase.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		7FAC2F1791114107A5575950 /* JSContextRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSContextRef.h"; path = "com.couchbase.lite.phonegap/JSContextRef.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		19D69D85AE284970884156C8 /* JSObjectRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSObjectRef.h"; path = "com.couchbase.lite.phonegap/JSObjectRef.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		F40BE1807C124240B66253F2 /* JSStringRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSStringRef.h"; path = "com.couchbase.lite.phonegap/JSStringRef.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		A465FE3AAC61479088EF3467 /* JSStringRefCF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSStringRefCF.h"; path = "com.couchbase.lite.phonegap/JSStringRefCF.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		25924EF90A81470BBE5ACB0A /* JSValueRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSValueRef.h"; path = "com.couchbase.lite.phonegap/JSValueRef.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		1B2EB3901F0D42E487E4C4D9 /* JavaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JavaScript.h"; path = "com.couchbase.lite.phonegap/JavaScript.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		6B0B29B772404CB098B6079C /* JavaScriptCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JavaScriptCore.h"; path = "com.couchbase.lite.phonegap/JavaScriptCore.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		448BF80EC6D44B5CBA2E54D6 /* WebKitAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WebKitAvailability.h"; path = "com.couchbase.lite.phonegap/WebKitAvailability.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		4B2E24ED7E0C4596A5BCAB2F /* CBLListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLListener.h"; path = "com.couchbase.lite.phonegap/CBLListener.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		2E3A845AE08E444FBA7D4596 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
-		8E52C9583F8740F2B0C717D3 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
-		AB8862C16FBF42CC95215BC4 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libicucore.dylib"; path = "usr/lib/libicucore.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
-		B497C1453E1642E88E326C2A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
-		129BC9984E1F405FBAC5AF57 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		AD11D19B92674BB7AA447917 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		6AF0D7BB8E364D2C9D626193 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		78AD8239CE0349D9BB8017E1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		81361BEFD9B74FECAA1B7D59 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		E0A50CA269E44AD9A6485922 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libicucore.dylib"; path = "usr/lib/libicucore.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		CE22AB1A545A41BDB54DE770 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		15FB28D83D28444CA8CC2FA4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		81A9E2C9E20D413BAE3E04B1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		A1ECA32865BE4348871FCBDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,17 +129,13 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
-				376D3ECC82BE4B2E8FD39C51 /* libCBLJSViewCompiler.a in Frameworks */,
-				2B81C804D773433EB1FA623E /* CouchbaseLite.a in Frameworks */,
-				66B56779735443B49AC0C4B2 /* JavaScriptCore.a in Frameworks */,
-				9F941022E8D24407BD2967BA /* CouchbaseLiteListener.a in Frameworks */,
-				76DDAC362D884183B620CA2E /* libsqlite3.dylib in Frameworks */,
-				337A5B2A2BF84526BD87554E /* libstdc++.dylib in Frameworks */,
-				601416C0E1984810A05709E6 /* libicucore.dylib in Frameworks */,
-				31B1F92A6DAB46A294732A8D /* libz.dylib in Frameworks */,
-				B69A9359EDB749A0B19DECA7 /* Security.framework in Frameworks */,
-				2942CC29128444EEBEDE3753 /* CFNetwork.framework in Frameworks */,
-				1D430007AF0D458C884280ED /* SystemConfiguration.framework in Frameworks */,
+				AD192DCA4B104D1A9312ADBA /* libsqlite3.dylib in Frameworks */,
+				D6FD1D3F7B8646BAA6F0F9ED /* libstdc++.dylib in Frameworks */,
+				245C8E9EB5574827A8192705 /* libicucore.dylib in Frameworks */,
+				9617D89DEFEB43B7AD79418A /* libz.dylib in Frameworks */,
+				85FFEC020D1441E789A10032 /* Security.framework in Frameworks */,
+				9CEDFE394E854322B07E16C8 /* CFNetwork.framework in Frameworks */,
+				9297FC6C4CC0486ABB77870E /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,17 +208,13 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
-				C8F298CADA274CEE831C5CE9 /* libCBLJSViewCompiler.a */,
-				9917D644FDCE4867919C968C /* CouchbaseLite.a */,
-				B1B9E1DDCAA445509771089B /* JavaScriptCore.a */,
-				3D65CCD7EE9744AAA743A1C4 /* CouchbaseLiteListener.a */,
-				2E3A845AE08E444FBA7D4596 /* libsqlite3.dylib */,
-				8E52C9583F8740F2B0C717D3 /* libstdc++.dylib */,
-				AB8862C16FBF42CC95215BC4 /* libicucore.dylib */,
-				B497C1453E1642E88E326C2A /* libz.dylib */,
-				129BC9984E1F405FBAC5AF57 /* Security.framework */,
-				AD11D19B92674BB7AA447917 /* CFNetwork.framework */,
-				6AF0D7BB8E364D2C9D626193 /* SystemConfiguration.framework */,
+				78AD8239CE0349D9BB8017E1 /* libsqlite3.dylib */,
+				81361BEFD9B74FECAA1B7D59 /* libstdc++.dylib */,
+				E0A50CA269E44AD9A6485922 /* libicucore.dylib */,
+				CE22AB1A545A41BDB54DE770 /* libz.dylib */,
+				15FB28D83D28444CA8CC2FA4 /* Security.framework */,
+				81A9E2C9E20D413BAE3E04B1 /* CFNetwork.framework */,
+				A1ECA32865BE4348871FCBDD /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,38 +230,6 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				E04E44F92EB042CE8F7886B8 /* CBLite.m */,
-				C50B7989086B4CC0BAB01920 /* CBLite.h */,
-				96432D85227545A890BDE42D /* CBLRegisterJSViewCompiler.h */,
-				DBF62F7B1E404EB4980DD2C0 /* CBLAttachment.h */,
-				7287E0F4EA464832A86819A0 /* CBLAuthenticator.h */,
-				74A537B4E3474BAEBA4909AC /* CBLDatabase.h */,
-				73A614E9EC9245B3BD3ECEF1 /* CBLDatabaseChange.h */,
-				2CEE4DCC50A34892A6D9FB2D /* CBLDocument.h */,
-				145A6AC32B134BA199E56E16 /* CBLGeometry.h */,
-				1D854924808C4D379862C4BB /* CBLJSON.h */,
-				D4A239F1C385453682415E1A /* CBLManager.h */,
-				B55004E1D77F435197836942 /* CBLModel.h */,
-				B82202665A0740F081D2BD15 /* CBLModelFactory.h */,
-				E2B6903101E94214819BF58B /* CBLQuery+FullTextSearch.h */,
-				E1F3F0E35BCA477086E2B413 /* CBLQuery+Geo.h */,
-				8CCD03D1D6EE4814B888C3C3 /* CBLQuery.h */,
-				591A803620C14A318CEC61C6 /* CBLReplication.h */,
-				C3746113CDDD42F7A4073C14 /* CBLRevision.h */,
-				BF329425C0C542BD9912431B /* CBLUITableSource.h */,
-				E1BE046642F24522BBDA68C0 /* CBLView.h */,
-				DC8CDA09CD4A49F0A1B5D928 /* CouchbaseLite.h */,
-				734BAB2F4629468EB1BC9513 /* MYDynamicObject.h */,
-				433D6E1CAFBE47E7AA0207AB /* JSBase.h */,
-				7FAC2F1791114107A5575950 /* JSContextRef.h */,
-				19D69D85AE284970884156C8 /* JSObjectRef.h */,
-				F40BE1807C124240B66253F2 /* JSStringRef.h */,
-				A465FE3AAC61479088EF3467 /* JSStringRefCF.h */,
-				25924EF90A81470BBE5ACB0A /* JSValueRef.h */,
-				1B2EB3901F0D42E487E4C4D9 /* JavaScript.h */,
-				6B0B29B772404CB098B6079C /* JavaScriptCore.h */,
-				448BF80EC6D44B5CBA2E54D6 /* WebKitAvailability.h */,
-				4B2E24ED7E0C4596A5BCAB2F /* CBLListener.h */,
 			);
 			name = Plugins;
 			path = "Hello World/Plugins";
@@ -495,7 +414,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				9DD452389E7D4F309D651FC6 /* CBLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,13 +456,6 @@
 				);
 				PRODUCT_NAME = "Hello World";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-				);
 			};
 			name = Debug;
 		};
@@ -574,13 +485,6 @@
 				);
 				PRODUCT_NAME = "Hello World";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-					"\"$(SRCROOT)/Hello World/Plugins/com.couchbase.lite.phonegap\"",
-				);
 			};
 			name = Release;
 		};
