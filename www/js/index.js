@@ -71,6 +71,13 @@ function initDebug() {
             if (!window.cblite)
             {
                 window.cblite = {};
+                window.cblite.getURL = function(callback) {
+          
+                    err = {};
+                    url = "http://61c9d8b6-9c13-458f-880b-456679df325f:bd04f604-8af3-4de3-8a3b-cefa86d42fc1@localhost:5984/";
+            
+                    callback(err, url);
+                };
             }
     }
 }
@@ -118,9 +125,8 @@ function initEventHandlers() {
             log("Room = " + JSON.stringify(roomInitValue));    
                 
             //Retrieve the room
-            //var url = DB_URL + "/" + roomKey;
-            var url = DB_URL + "/" + "test_room";
-            
+            //var url = DB_URL + "/" + "test_room";
+            var url = DB_URL + "/" + roomKey;
             
             log("The room URL is: " + url);
             
@@ -131,7 +137,7 @@ function initEventHandlers() {
                         log("Retrieved room: " + JSON.stringify(data));
                         
                     },
-                    function(req, status, err) {
+                    function(res, status, err) {
                         
                         //Create a new room if not found
                         if (err == "Not Found")
@@ -142,7 +148,7 @@ function initEventHandlers() {
                             doPut(url,
                                   roomInitValue,
                                   function(data) {log("Created room: " + JSON.stringify(data))},
-                                  function(req, status, err) { log("ERROR: Could not create the room document. " + err) }
+                                  function(res, status, err) { log("ERROR: Could not create the room document. " + err + ";" + JSON.stringify(res) ) }
                                  );
                         }   
                     }
@@ -165,20 +171,7 @@ function initCouchbaseLite() {
     //Check if Couchbase Lite is available
     if (!window.cblite) {
         
-        log('Couchbase Lite not installed, running as web app');
-        
-        //Only for testing purposes
-        /*
-        window.cblite = {};
-        window.cblite.getURL = function(callback) {
-          
-            err = {};
-            url = "http://61c9d8b6-9c13-458f-880b-456679df325f:bd04f604-8af3-4de3-8a3b-cefa86d42fc1@localhost:5984/";
-            
-            callback(err, url);
-            
-        };
-        */
+        log('Couchbase Lite not installed, running in browser');
     }
     else
     {
@@ -201,23 +194,16 @@ function initCouchbaseLite() {
                 DB_URL,
                 "",
                 function(data) {log("Created DB: " + JSON.stringify(data))},
-                function(req, status, err) { log("ERROR: Could not create DB. Is it already existent?: " + err)
+                function(res, status, err) { log("ERROR: Could not create DB. Is it already existent?: " + err)
                 
                     doGet(
                         DB_URL,
                         function(data) {
                             
                             log("Accessed DB: " + JSON.stringify(data));
-                          
-                            //Create a test document
-                            doPut(
-                                DB_URL + "/_local/test_doc",
-                                {"title" : "Test", "descritption": "A test document"},
-                                function(data) {log("Added test document")},
-                                function(req, status, err){log("ERROR: Could not create the test document:" + err); log(JSON.stringify(req));}
-                            );                                   
+                                                        
                         },
-                        function(req, status, err) {log("ERROR: " + err);}
+                        function(res, status, err) {log("ERROR: " + err);}
                     );
                 
                 }
