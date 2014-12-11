@@ -3,7 +3,7 @@
  */
 var LOG_TO_UI = true;
 var DEBUG_IN_BROWSER = false;
-var DB_NAME = "test_chatdemo_1";
+var DB_NAME = "test_chatdemo_2";
 var DB_URL = "";
 
 /**
@@ -119,7 +119,7 @@ function initEventHandlers() {
             
             var roomKey = "room::" + room;
             var roomInitValue = {
-                "messages" : [msgKey]        
+                "messages" : [ msgKey ]        
             };
          
             log("Room = " + JSON.stringify(roomInitValue));    
@@ -192,7 +192,7 @@ function initCouchbaseLite() {
             //Create a database        
             doPut(
                 DB_URL,
-                "",
+                {},
                 function(data) {log("Created DB: " + JSON.stringify(data))},
                 function(res, status, err) { log("ERROR: Could not create DB. Is it already existent?: " + err)
                 
@@ -218,10 +218,13 @@ function initCouchbaseLite() {
  */
 function doPut(purl, pdata, callback, errCallback)
 {
+    var strdata = JSON.stringify(pdata);
+    
     var request = {
         url: purl,
+        processData : false,
         type: 'PUT',
-        data: pdata,
+        data: strdata,
         contentType: "application/json",
         success: callback,
         error: errCallback
