@@ -11,8 +11,13 @@
  */
 var LOG_TO_UI = false;
 var DEBUG_IN_BROWSER = true;
-var DB_NAME = "test_chatdemo_5";
-var DB_URL = "";
+var DB_NAME = "test_chatdemo_6";
+var REMOTE_SYNC_URL = "http://192.168.7.131:4984/cbl-phonegap-chatdemo"
+var SYNC_INTERVAL = 2000;
+
+//Set once during the initialization
+var _liteUrl = "";
+var _dbUrl = "";
 
 /**
  *+ Intialization
@@ -141,6 +146,7 @@ function initEventHandlers() {
             
             var roomKey = "room::" + room;
             var roomInitValue = {
+                "room" : room,
                 "messages" : [ msgKey ]        
             };
          
@@ -148,7 +154,7 @@ function initEventHandlers() {
                 
             //Create or update the room
             //-- Retrieve the room
-            var url = DB_URL + "/" + roomKey;
+            var url = _dbUrl + "/" + roomKey;
             
             log("The room URL is: " + url);
             
@@ -189,7 +195,7 @@ function initEventHandlers() {
             );
             
             //Create the chat message
-            var msgUrl = DB_URL + "/" + msgKey;
+            var msgUrl = _dbUrl + "/" + msgKey;
             
             doPut(msgUrl,
                   msgValue,
@@ -209,13 +215,16 @@ function initEventHandlers() {
  */
 function checkDBReady()
 {
+    log("Checking if the DB is ready");
+    
     doGet(
-            DB_URL,
+            _dbUrl,
             function(data) {
                             
                 log("Accessed DB: " + JSON.stringify(data));
                 
                 initViews();
+                initReplication();
                                              
             },
             function(res, status, err) {log("ERROR: " + JSON.stringify(res))}
@@ -245,30 +254,80 @@ function initCouchbaseLite() {
                 log("Couchbase Lite running at " + url);
             }
             
-            DB_URL = url + DB_NAME;
+            _liteUrl = url;
+            _dbUrl = url + DB_NAME;
             
-            log("The DB URL is " + DB_URL);
+            log("The DB URL is " + _dbUrl);
                 
             //Create a database        
             doPut(
-                DB_URL,
+                _dbUrl,
                 {},
                 function(data) {
 
                     log("Created DB: " + JSON.stringify(data));
                     checkDBReady();
-                
                 },
                 function(res, status, err) { 
                     
                     log("ERROR: Could not create DB. Is it already existent?: " + err);
-                    checkDBReady(); 
+                    checkDBReady();
                 }
             );
         });
         
     }
 }
+
+
+/**
+ * Initialize the synchronization
+ */
+function initReplication() {
+    
+    log("Initializing replication");
+    
+    var push = {};
+    push.source  = DB_NAME;
+    //push.source = _dbUrl;
+    
+    push.target = REMOTE_SYNC_URL;
+    
+    var pull = {};
+    pull.target = DB_NAME;
+    //pull.target = _dbUrl;
+    pull.source = REMOTE_SYNC_URL;
+        
+    var replUrl = _liteUrl + "_replicate";
+    
+    log("replUrl = " + replUrl);
+    
+    function doPush()
+    {
+        log("push = " + JSON.stringify(push));
+        
+        doPost(replUrl,
+               push,
+               function(data) {log("Pushed: " + JSON.stringify(data));},
+               function(res, status, err) { log("ERROR: Could not push. " + err + ";" + JSON.stringify(res) ) }
+            );
+    }
+    
+    function doPull()
+    {
+        log("pull = " + JSON.stringify(pull));
+
+        doPost(replUrl,
+               pull,
+               function(data) {log("Pulled: " + JSON.stringify(data)), initViews()},
+               function(res, status, err) { log("ERROR: Could not pull. " + err + ";" + JSON.stringify(res) ) }
+         );   
+    }
+
+    setInterval(doPush,SYNC_INTERVAL);
+    setInterval(doPull,SYNC_INTERVAL);
+}
+
 
 
 /**
@@ -295,7 +354,7 @@ function initChatMessagesView(room)
     log("Initializing chat messages view");
     
     var roomKey = "room::" + room;
-    var roomUrl = DB_URL + "/" + roomKey;
+    var roomUrl = _dbUrl + "/" + roomKey;
     
     log("roomUrl = " + roomUrl);
     
@@ -314,7 +373,7 @@ function initChatMessagesView(room)
                         
                             var msgKey = data.messages[i];
                             
-                            var msgURL = DB_URL + "/" + msgKey;
+                            var msgURL = _dbUrl + "/" + msgKey;
                             
                             log("Getting message " + msgKey);
                             
@@ -360,38 +419,6 @@ function clearMessagesView() {
        $('#chatMessages').empty();
 }
 
-/**
- * Helper to execute a HTTP PUT
- */
-function doPut(purl, pdata, callback, errCallback)
-{
-    var strdata = JSON.stringify(pdata);
-    
-    var request = {
-        url: purl,
-        processData : false,
-        type: 'PUT',
-        data: strdata,
-        contentType: "application/json",
-        success: callback,
-        error: errCallback
-    };
-    
-    log("Requesting " + JSON.stringify(request)); 
-
-    $.ajax(request);
-}
-
-
-
-/**
- *+ Business logic
- **
- **
- ** TODO: Refactor the app to use createMessage, createRoom, ... at all
- ** ...
- */
-
 
 
 /**
@@ -402,15 +429,44 @@ function doPut(purl, pdata, callback, errCallback)
  **
  */
 
+
+/**
+ * Helper to execute a 'PUT' or 'POST'
+ */
+function doChangeReq(purl, pdata, callback, errCallback, ptype)
+{
+    var strdata = JSON.stringify(pdata);
+    
+    var request = {
+        url: purl,
+        processData : false,
+        type: ptype,
+        data: strdata,
+        contentType: "application/json",
+        success: callback,
+        error: errCallback
+    };
+    
+    log("Requesting " + JSON.stringify(request)); 
+
+    $.ajax(request);
+}
+    
+/**
+ * Helper to execute a HTTP PUT
+ */    
+function doPut(purl, pdata, callback, errCallback)
+{
+    doChangeReq(purl, pdata, callback, errCallback,'PUT');
+}
+
 /**
  * Helper to execute a HTTP POST
  */
 function doPost(purl, pdata, callback, errCallback)
 {   
-    $.post(purl, pdata, callback, 'json').fail(errCallback);
+    doChangeReq(purl, pdata, callback, errCallback,'POST');
 }
-
-
 
 /**
  * Helper to execute a HTTP GET
@@ -419,4 +475,3 @@ function doGet(purl, callback, errCallback)
 {   
     $.getJSON(purl).done(callback).fail(errCallback);
 }
-    
